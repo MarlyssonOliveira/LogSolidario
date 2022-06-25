@@ -3,11 +3,11 @@ import { StyleSheet, View } from "react-native";
 import { Text } from "react-native-elements";
 import Header from "../components/header";
 
-export default function Home() {
+export default function Estoque() {
   return (
     <View>
       <Header />
-      <Text style={styles.content}>Conteudo da Home</Text>
+      <Text style={styles.content}>Conteudo do Estoque</Text>
     </View>
   );
 }
