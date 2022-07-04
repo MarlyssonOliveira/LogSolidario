@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Header() {
+export default function Header({navigation}) {
     return (
         <View style={styles.header}>
                 <Text style={styles.headerText}>Logo</Text>

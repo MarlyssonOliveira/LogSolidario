@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import HomeStack from "./rotas/homeStack";
 import Navigator from "./rotas/homeStack";
-import TabNavigator from "./rotas/tabNavigator"
 
 export default function App() {
   return (
     <>
-      <TabNavigator />
+      <HomeStack />
     </>
   );
 }

@@ -6,7 +6,6 @@ import Header from "../components/header";
 export default function Estoque() {
   return (
     <View>
-      <Header />
       <Text style={styles.content}>Conteudo do Estoque</Text>
     </View>
   );
