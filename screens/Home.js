@@ -6,6 +6,7 @@ import Header from "../components/header";
 
 export default function Home({navigation}) {
 
+  
 const pressDoacao = () => {
     navigation.navigate('NovaDoacao');
 }
@@ -20,26 +21,8 @@ const pressEstoque = () => {
 
   return (
     <View>
-     
       <Text style={styles.content}>Conteudo da Home</Text>
-      <View style={styles.botoes}>
-             <Button 
-                title = 'Doar'
-                color = '#1e90ff'
-                onPress = {pressDoacao}
-              />
-              <Button 
-                title = 'Entregar'
-                color = '#1e90ff'
-                onPress = {pressEntrega}
-              />
-              <Button 
-                title = 'Estoque'
-                color = '#1e90ff'
-                onPress = {pressEstoque}
-              />
-            </View>
-            <Footer/>
+      <Footer ativo="home"/>
     </View>
   );
 }

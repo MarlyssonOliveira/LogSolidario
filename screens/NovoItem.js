@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View,  TextInput, Button } from 'react-native';
 import RNPickerSelect from "react-native-picker-select";
+import Footer from '../components/footer';
 
 export default function NovoItem({ navigation }) {
 
@@ -35,7 +36,7 @@ export default function NovoItem({ navigation }) {
                 onPress = {pressItem}
             />
             </View>
-            
+            <Footer ativo="doacao"/>
        </View> 
     )
 }

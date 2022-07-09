@@ -59,7 +59,7 @@ export default function NovoDoacao({ navigation }) {
                 onPress = {pressDoar}
             />
             </View>
-            <Footer/>
+            <Footer ativo="doacao"/>
        </View> 
     )
 }

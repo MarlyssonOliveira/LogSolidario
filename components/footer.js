@@ -1,10 +1,9 @@
-import { Icon } from "react-native-elements";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Button, Icon } from "react-native-elements";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { withNavigation } from "react-navigation";
 
 
-
-export default function Footer({navigation}) {
-    
+function Footer({navigation, ativo}) {
     const pressHome = () => {
         navigation.navigate('Home');
     }
@@ -29,78 +28,84 @@ export default function Footer({navigation}) {
                     <Icon
                         name="home"
                         type="feather"
-                        color={"#000"}
+                        color={ativo == "home" ? "#074EE8": "#000"}
                         style={{
-                            opacity: "1",
+                            opacity: ativo == "home" ?  1 :0.5,
+                            color: "#074EE8"
                         }}
-                        onPress = {pressHome}
+                        onPress={pressHome}
                     />
                     <Text
                         style={{
-                            opacity: "1",
-                            color: "#000",
+                            opacity: ativo=="home"?  "1":0.5,
+                            color: ativo=="home"? "#074EE8": "#000"
                         }}
                     >
                         Home
                     </Text>
                 </View>
+                {/* possivel barra de separação */}
                 <View>
                     <View>
                         <Icon
                             name="heart"
-                            color={"#000"}
+                            color={ativo == "doacao" ? "#074EE8": "#000"}
                             type="feather"
                             style={{
-                                opacity: "1",
+                                opacity: ativo=="doacao"?  1:0.5,
+                                color: "#074EE8"
                             }}
                             onPress = {pressDoacao}
                         />
                         <Text
                             style={{
-                                opacity: "1",
-                                color: "#000",
+                                opacity: ativo=="doacao"?  1 :0.5,
+                                color: ativo=="doacao"? "#074EE8": "#000"
                             }}
                         >
                             Doação
                         </Text>
                     </View>
                 </View>
+                {/* possivel barra de separação */}
                 <View>
                     <View>
                         <Icon
                             name="truck"
-                            color={"#000"}
+                            color={ativo == "entrega" ? "#074EE8": "#000"}
                             type="feather"
                             style={{
-                                opacity: "1",
+                                opacity: ativo=="entrega"?  1:0.5,
+                                color: "#074EE8"
                             }}
                             onPress = {pressEntrega}
                         />
                         <Text
                             style={{
-                                opacity: "1",
-                                color: "#000",
+                                opacity: ativo=="entrega"?  1:0.5,
+                                color: ativo=="entrega"? "#074EE8": "#000"
                             }}
                         >
                             Entregas
                         </Text>
                     </View>
                 </View>
+                {/* possivel barra de separação */}
                 <View>
                     <View>
                         <Icon
-                            color={"#000"}
+                            color={ativo == "estoque" ? "#074EE8": "#000"}
                             name="package"
                             type="feather"
                             style={{
-                                opacity: "1",
+                                opacity: ativo=="estoque"?  "1":0.5,
                             }}
                             onPress = {pressEstoque}
                         />
                         <Text
                             style={{
-                                opacity: "1",
-                                color: "#000",
+                                opacity: ativo=="estoque"?  "1":0.5,
+                                color: ativo=="estoque"? "#074EE8": "#000"
                             }}
                         >
                             Estoque
@@ -139,3 +144,5 @@ const styles = StyleSheet.create({
         elevation: 5,
     }
 })
+
+export default withNavigation(Footer);

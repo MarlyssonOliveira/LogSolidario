@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
 import RNPickerSelect from "react-native-picker-select";
+import Footer from '../components/footer';
 
 export default function NovoEntrega({ navigation }) {
 
@@ -60,7 +61,7 @@ export default function NovoEntrega({ navigation }) {
                 onPress = {pressEntregar}
             />
             </View>
-            
+            <Footer ativo="entrega"/>
        </View> 
     )
 }

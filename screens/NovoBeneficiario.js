@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Image, TextInput, Button } from 'react-native';
+import Footer from '../components/footer';
 
 export default function NovoBeneficiario({ navigation }) {
 
@@ -34,7 +35,7 @@ export default function NovoBeneficiario({ navigation }) {
                 onPress= {pressCadastrar}
             />
             </View>
-            
+            <Footer ativo="entrega"/>
        </View> 
     )
 }

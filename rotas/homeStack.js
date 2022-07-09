@@ -70,7 +70,8 @@ const telas = {
 
 const HomeStack = createStackNavigator(telas, {
     defaultNavigationOptions: {
-        headerStyle: {backgroundColor: "#074EE8", height: 60}
+        headerStyle: {backgroundColor: "#074EE8", height: 60},
+        animationEnabled: false,
         }
     }
     
