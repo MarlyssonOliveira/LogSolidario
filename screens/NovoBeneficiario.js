@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Image, TextInput, Button } from 'react-native';
+import { StyleSheet, View, Image, Button } from 'react-native';
 import Footer from '../components/footer';
+import { TextInput } from "react-native-paper";
 
 export default function NovoBeneficiario({ navigation }) {
 
@@ -9,73 +10,88 @@ export default function NovoBeneficiario({ navigation }) {
     }
 
     return (
-       <View style={styles.profile}>
-            <TextInput 
+        <View style={styles.profile}>
+            <TextInput
                 style={styles.input}
-                placeholder='Nome'
+                label="Nome do Beneficiario"
+                placeholder='Nome do Beneficiario'
+                activeUnderlineColor="blue"
             />
             <View style={styles.endereco}>
-                <TextInput 
+                <TextInput
                     style={styles.inputCep}
-                    placeholder="CEP"
+                    label="CEP"
+                    placeholder='CEP'
+                    activeUnderlineColor="blue"
                 />
-                <TextInput 
+                <TextInput
                     style={styles.inputN}
-                    placeholder='Nº'
+                    label="Num"
+                    placeholder='Num'
+                    activeUnderlineColor="blue"
                 />
             </View>
-            <TextInput 
-                style={styles.input}
-                placeholder='Senha'
-            />
+            
             <View style={styles.botoes}>
-            <Button 
-                title= 'Cadastrar'
-                color= '#1e90ff'
-                onPress= {pressCadastrar}
-            />
+                <Button
+                    title='Cadastrar'
+                    color='#1e90ff'
+                    onPress={pressCadastrar}
+                />
             </View>
-            <Footer ativo="entrega"/>
-       </View> 
+            <TextInput
+                style={styles.input}
+                label="Telefone"
+                placeholder='Telefone'
+                activeUnderlineColor="blue"
+            />
+
+            <Footer ativo="entrega" />
+        </View>
     )
 }
 const styles = StyleSheet.create({
-    profile:{
-        alignItems:'center',
+    profile: {
+        alignItems: 'center',
         paddingTop: '30%'
     },
-    input:{
-        paddingTop:'20%',
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-    
+    input: {
+        borderColor: "gray",
+        width: "70%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: "10%",
     },
-    botoes:{
+    inputN: {
+        borderColor: "gray",
+        width: "30%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: "10%",
+    },
+    botoes: {
+        position: "fixed",
+        bottom: 90,
+        width: 100
+    },
+    inputCep: {
+        borderColor: "gray",
+        width: "70%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: "10%",
+    },
+    botoes: {
         position: "fixed",
         bottom: 70,
         flex: 1
     },
-    endereco:{
+    endereco: {
         flexDirection: "row",
-        alignItems: "center",
-        alignContent: "center",
-        marginLeft: "20%",
-        paddingTop:'20%',
-       
-    },
-    inputCep: {
-        
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-        width: "40%"
-    },
-    inputN:{
-      
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-        width: "20%",
-        marginLeft:"10%"
-    }
+        width: "70%",
 
-        
-    })
+
+    },
+
+
+})

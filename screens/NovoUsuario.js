@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Image, TextInput, Button } from 'react-native';
+import { StyleSheet, View, Image, Button } from 'react-native';
+import { TextInput } from "react-native-paper";
 
 export default function NovoUsuario({ navigation }) {
 
@@ -9,21 +10,29 @@ export default function NovoUsuario({ navigation }) {
 
     return (
        <View style={styles.profile}>
-            <TextInput 
+           <TextInput
                 style={styles.input}
+                label="Nome/Razão Social"
                 placeholder='Nome/Razão Social'
+                activeUnderlineColor="blue"             
             />
-            <TextInput 
+            <TextInput
                 style={styles.input}
+                label="CPF/CNPJ"
                 placeholder='CPF/CNPJ'
+                activeUnderlineColor="blue"             
             />
             <TextInput 
                 style={styles.input}
+                label="Email"
                 placeholder='Email'
+                activeUnderlineColor="blue" 
             />
             <TextInput 
                 style={styles.input}
+                label="Senha"
                 placeholder='Senha'
+                activeUnderlineColor="blue" 
             />
             <View style={styles.botoes}>
             <Button 
@@ -42,9 +51,11 @@ const styles = StyleSheet.create({
         paddingTop: '30%'
     },
     input:{
-        paddingTop:'20%',
-        borderBottomColor: 'black',
-        borderBottomWidth: 1
+        borderColor: "gray",
+        width: "70%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop:"10%",
     },
     botoes:{
         position: "fixed",

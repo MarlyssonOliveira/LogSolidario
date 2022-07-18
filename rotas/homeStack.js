@@ -1,6 +1,7 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import Home from "../screens/home";
+import Home2 from "../screens/Home2"
 import Header from "../components/header";
 import Estoque from "../screens/Estoque";
 import Login from "../screens/Login";
@@ -14,9 +15,10 @@ import Footer from "../components/footer";
 
 const telas = {
     Login: {
-        screen: Login,
+        screen: Home,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            
         } 
     },
     NovaEntrega:{
@@ -34,6 +36,12 @@ const telas = {
     
     Home: {
         screen: Home,
+        navigationOptions:{
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+        } 
+    },
+    Home2: {
+        screen: Home2,
         navigationOptions:{
             headerTitle: () => <Header title='Logotipo' user='fulano'/>
         } 
@@ -70,7 +78,9 @@ const telas = {
 
 const HomeStack = createStackNavigator(telas, {
     defaultNavigationOptions: {
-        headerStyle: {backgroundColor: "#074EE8", height: 60},
+        headerStyle: {
+            backgroundColor: '#1e90ff',
+          },
         animationEnabled: false,
         }
     }

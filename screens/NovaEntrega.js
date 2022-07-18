@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import RNPickerSelect from "react-native-picker-select";
 import Footer from '../components/footer';
+import { TextInput } from "react-native-paper";
 
 export default function NovoEntrega({ navigation }) {
 
@@ -18,9 +19,11 @@ export default function NovoEntrega({ navigation }) {
 
     return (
        <View style={styles.profile}>
-            <TextInput 
+           <TextInput
                 style={styles.input}
-                placeholder='Nome do beneficiário'
+                label="Nome do Beneficiario"
+                placeholder='Nome do Beneficiario'
+                activeUnderlineColor="blue"
             />
 
             <View style={styles.mensagem}>
@@ -48,9 +51,11 @@ export default function NovoEntrega({ navigation }) {
                     />
                 </View>
 
-                <TextInput 
-                    style={styles.input}
-                    placeholder='Qnt'
+                <TextInput
+                    style={styles.inputQtd}
+                    label="Qtd"
+                    placeholder='Qtd'
+                    activeUnderlineColor="blue"
                 />
             </View>
             
@@ -61,6 +66,8 @@ export default function NovoEntrega({ navigation }) {
                 onPress = {pressEntregar}
             />
             </View>
+
+            
             <Footer ativo="entrega"/>
        </View> 
     )
@@ -70,23 +77,37 @@ const styles = StyleSheet.create({
         alignItems:'center',
         paddingTop: '30%'
     },
-    input:{
-        paddingTop:'20%',
-        borderBottomColor: 'black',
-        borderBottomWidth: 1
+    input: {
+        borderColor: "gray",
+        width: "70%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: "10%",
+    },
+    inputQtd: {
+        borderColor: "gray",
+        width: "30%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: "10%",
+    },
+   
+    inputAndroid: {
+        borderColor: "gray",
+        width: "70%",
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: "10%",
     },
     botoes:{
         position: "fixed",
         bottom: 70,
         width:100
     },
-    inputAndroid: {
-        fontSize: 18,
-        color: 'black',
-        paddingTop: '30%'
-    },
-    doacao:{
-        flexDirection:"row",
+
+    doacao: {
+        flexDirection: "row",
+        width: "70%",
 
     },
     mensagem:{

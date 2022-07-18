@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Header({navigation}) {
     return (
         <View style={styles.header}>
-                <Text style={styles.headerText}>Logo</Text>
+                <Text style={styles.headerText}>LogSolidario</Text>
                 <Text style={styles.headerText}>UserName</Text>  
         </View>
     )
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: "#074EE8", 
+        backgroundColor: "#1e90ff", 
         height: 60,
         paddingHorizontal: "3%"
     },
