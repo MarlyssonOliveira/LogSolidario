@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function Header({navigation}) {
     return (
         <View style={styles.header}>
-                <Text style={styles.headerText}>LogSolidario</Text>
+            <Image style={{ width: 45, height: 30 }} source={require('../assets/logo.png')} /> 
                 <Text style={styles.headerText}>UserName</Text>  
         </View>
     )
@@ -11,6 +11,7 @@ export default function Header({navigation}) {
 
 const styles = StyleSheet.create({
     header: {
+  
         width: '100%',
         height: '100%', 
         flexDirection: 'row',

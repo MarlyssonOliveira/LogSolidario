@@ -10,12 +10,13 @@ import NovoItem from "../screens/NovoItem"
 import NovoBeneficiario from "../screens/NovoBeneficiario";
 import NovaDoacao from "../screens/NovaDoacao";
 import NovaEntrega from "../screens/NovaEntrega";
+import Detalhes from "../screens/Detalhes";
 import Footer from "../components/footer";
 
 
 const telas = {
     Login: {
-        screen: Home,
+        screen: Login,
         navigationOptions:{
             headerTitle: () => <Header title='Logotipo' user='fulano'/>,
             
@@ -24,50 +25,68 @@ const telas = {
     NovaEntrega:{
         screen: NovaEntrega,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
+            
+            
         }
     },
     NovaDoacao:{
         screen: NovaDoacao,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         }
     },
     
     Home: {
         screen: Home,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         } 
     },
     Home2: {
         screen: Home2,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         } 
     },
     Estoque: {
         screen: Estoque,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         } 
     },
     NovoUsuario: {
         screen: NovoUsuario,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         } 
     },
     NovoItem: {
         screen: NovoItem,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         } 
     },
     NovoBeneficiario:{
         screen: NovoBeneficiario,
         navigationOptions:{
-            headerTitle: () => <Header title='Logotipo' user='fulano'/>
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
+        }
+    },
+
+    Detalhes:{
+        screen: Detalhes,
+        navigationOptions:{
+            headerTitle: () => <Header title='Logotipo' user='fulano'/>,
+            headerLeft: null,
         }
     },
     Footer:{
@@ -82,6 +101,7 @@ const HomeStack = createStackNavigator(telas, {
             backgroundColor: '#1e90ff',
           },
         animationEnabled: false,
+
         }
     }
     

@@ -51,10 +51,13 @@ const styles = StyleSheet.create({
         paddingTop: '30%'
     },
     input:{
-        borderColor: "gray",
+        borderColor: "grey",
         width: "70%",
         borderWidth: 1,
-        borderRadius: 10,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         marginTop:"10%",
     },
     botoes:{

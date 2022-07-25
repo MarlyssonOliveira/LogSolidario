@@ -14,7 +14,7 @@ export default function NovoDoacao({ navigation }) {
         navigation.navigate('NovoItem');
     }
 
-    const [selectedValue, setSelectedValue] = useState("java");
+    const [selectedValue, setSelectedValue] = useState();
 
     return (
         <View style={styles.profile}>
@@ -31,8 +31,9 @@ export default function NovoDoacao({ navigation }) {
                     onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
                     itemStyle={{ backgroundColor: "grey", color: "grey", fontFamily:"Ebrima", fontSize:17 }}
                 >
-                    <Picker.Item label="Arroz" value="java" />
-                    <Picker.Item label="Feijão" value="js" />
+                     <Picker.Item label="Escolha um item!" value="" />
+                    <Picker.Item label="Arroz" value="arroz" />
+                    <Picker.Item label="Feijão" value="feijao" />
                 </Picker>
 
 
@@ -72,18 +73,26 @@ const styles = StyleSheet.create({
         paddingTop: '30%'
     },
     input: {
-        borderColor: "gray",
+        borderColor: "grey",
         width: "70%",
         borderWidth: 1,
-        borderRadius: 10,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius:10,
         marginTop: "10%",
+        backgroundColor: "#95860700",
     },
     inputQtd: {
-        borderColor: "gray",
+        borderColor: "grey",
         width: "30%",
         borderWidth: 1,
-        borderRadius: 10,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius:10,
         marginTop: "10%",
+        backgroundColor: "#95860700",
     },
     botoes: {
         position: "fixed",
@@ -91,11 +100,16 @@ const styles = StyleSheet.create({
         width: 100
     },
     inputAndroid: {
-        borderColor: "gray",
+        borderColor: "grey",
         width: "70%",
         borderWidth: 1,
-        borderRadius: 10,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius:10,
+        marginRight: 5,
         marginTop: "10%",
+        backgroundColor: "#95860700",
     },
     doacao: {
         flexDirection: "row",

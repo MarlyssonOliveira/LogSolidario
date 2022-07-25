@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Icon } from "react-native-elements";
-import { StyleSheet, View, FlatList, TouchableOpacity } from "react-native";
+import { StyleSheet, View, FlatList, TouchableOpacity, ScrollView } from "react-native";
 import { Text } from "react-native-elements";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -20,7 +20,7 @@ export default function Home({ navigation }) {
   }
 
   const pressEstoque = () => {
-    navigation.navigate('Estoque');
+    navigation.navigate('Detalhes');
   }
 
   const pressHome2 = () => {
@@ -56,17 +56,28 @@ export default function Home({ navigation }) {
 
   return (
     <View>
-      <UpperTab ativo="entrada" />
-
+      <UpperTab ativo={"entrada"}></UpperTab>
+      <View style={styles.headerFlatlistStyle}>
+        <Text style={styles.textStyle}>
+          Doador
+        </Text>
+        <Text style={styles.textStyle}>
+          Data Registro
+        </Text>
+        <Text style={styles.textStyle}>
+          Id
+        </Text>
+        <Text style={styles.textStyle}>
+          Detalhes
+        </Text>
+      </View>
       <View style={styles.content}>
-
         <FlatList
           data={pessoa}
-          ListHeaderComponent={ListHeader}
+
           renderItem={({ item }) => (
             <TouchableOpacity onPress={pressEstoque}>
               <View style={styles.touch}>
-
                 <Text style={styles.item}>{item.doador}</Text>
                 <Text style={styles.item}>{item.data_registro}</Text>
                 <Text style={styles.item}>{item.key}</Text>
@@ -81,7 +92,8 @@ export default function Home({ navigation }) {
             </TouchableOpacity>
 
           )}
-        />
+          />
+        
       </View>
       <Footer ativo="home" />
     </View>
@@ -90,8 +102,9 @@ export default function Home({ navigation }) {
 
 const styles = StyleSheet.create({
   content: {
+    height: "75%",
     fontSize: "48px",
-    top: 70,
+    top: 110,
     width: "100%",
   },
   botoes: {
@@ -101,8 +114,8 @@ const styles = StyleSheet.create({
   },
   // Se aumentar as margens TOP e BOTTOM a lista faz o scroll sozinha, mas o header vai junto!!
   item: {
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 70,
+    marginBottom: 60,
    
 
   },
@@ -126,6 +139,8 @@ const styles = StyleSheet.create({
   },
   headerFlatlistStyle: {
     flexDirection: "row",
+    marginTop: 70,
+    position:"absolute",
     width: '100%',
     height: 45,
     justifyContent: "space-evenly",
@@ -140,7 +155,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 2,
-    marginTop:5,
   },
   textStyle: {
     textAlign: 'center',
